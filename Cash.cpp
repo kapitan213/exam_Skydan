@@ -3,6 +3,8 @@ using namespace std;
 
 
 double EnterCash();
+double ChangeCoin(double cash);
+
 int main()
 {
 	double cash = EnterCash();
@@ -38,6 +40,11 @@ double EnterCash()
 			break;
 	}
 	return cash;
+}
+
+double ChangeCoin(double cash)
+{
+	return cash * 100;
 }
 
 
