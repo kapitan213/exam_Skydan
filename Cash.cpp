@@ -4,6 +4,7 @@ using namespace std;
 
 double EnterCash();
 double ChangeCoin(double cash);
+void Recurs(double cash, int* pointer);
 
 int main()
 {
@@ -45,6 +46,33 @@ double EnterCash()
 double ChangeCoin(double cash)
 {
 	return cash * 100;
+}
+
+void Recurs(double cash, int* pointer)
+{
+	if (cash >= 25)
+	{
+		cash -= 25;
+		pointer[0]++;
+	}
+	else  if (cash >= 10)
+	{
+		cash -= 10;
+		pointer[1]++;
+	}
+	else if (cash >= 5)
+	{
+		cash -= 5;
+		pointer[2]++;
+	}
+	else if (cash >= 1)
+	{
+		cash -= 1;
+		pointer[3]++;
+	}
+
+	if (cash != 0)
+		Recurs(cash, pointer);
 }
 
 
