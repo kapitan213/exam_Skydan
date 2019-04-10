@@ -5,7 +5,7 @@ using namespace std;
 double EnterCash();
 double ChangeCoin(double cash);
 void Recurs(double cash, int* pointer);
-
+void Show(int* pointer);
 int main()
 {
 	double cash = EnterCash();
@@ -75,6 +75,13 @@ void Recurs(double cash, int* pointer)
 		Recurs(cash, pointer);
 }
 
+void Show(int * pointer)
+{
+	cout << "Use coin 25 " << pointer[0] << endl;
+	cout << "Use coin 10 " << pointer[1] << endl;
+	cout << "Use coin 5  " << pointer[2] << endl;
+	cout << "Use coin 1  " << pointer[3] << endl;
+}
 
 
 
