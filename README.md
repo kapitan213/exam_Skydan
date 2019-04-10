@@ -1,4 +1,4 @@
-#README
-we enter code 
-Add new function pyramid
-Add new function pyramid2
+# EXAM OF GIT
+We learn git command and use local reposytory.
+We create new project in git hub.
+We work together.
