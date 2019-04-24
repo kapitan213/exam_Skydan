@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+
+void Pyramid(int num);
+void Pyramid2(int num);
+int main() // main function
+{
+	int num;
+	int chooise;
+	while (true) // cycle check users date
+	{
+		cout << "Enter word (1) or (0): ";
+		cin >> chooise;
+
+		if (!cin)
+		{
+			cin.clear();
+			cout << "Enter correct number\n";
+			while (cin.get() != '\n')
+				continue;
+
+			continue;
+		}
+
+		if (chooise == 0 || chooise == 1)
+			break;
+	}
+
+	do// cycle check users date
+	{
+		cout << "Enter num: ";
+		cin >> num;
+
+		if (!cin)
+		{
+			cin.clear();
+			cout << "Enter correct number\n";
+			while (cin.get() != '\n')
+				continue;
+
+			continue;
+		}
+
+	} while (num <= 0);
+	if (chooise == 1) // If user enter 1 use function
+		Pyramid(num);
+	else // else athor function
+		Pyramid2(num);
+	system("pause");
+	return 0;
+}
+
+void Pyramid(int num) // Function draw pyramid
+{
+		for (int i = 0; i <= num; i++)
+		{
+			for (int k = num - i; k > 0; k--)
+				cout << " ";
+
+
+			for (int j = i; j > 0; j--)
+				cout << "#";
+
+			cout << " ";
+			for (int j = i; j > 0; j--)
+				cout << "#";
+			cout << endl;
+		}
+	cout << endl;
+}
+
+void Pyramid2(int num)
+{
+
+	for (int i = 0; i <= num; i++)
+	{
+		for (int k = num - i; k > 0; k--)
+			cout << " ";
+		for (int j = i; j > 0; j--)
+			cout << "#";
+		cout << endl;
+	}
+	cout << endl;
+}
